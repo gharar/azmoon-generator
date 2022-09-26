@@ -1,4 +1,3 @@
-import React, { FC } from 'react';
 import styled from '@mui/system/styled';
 import { Box, Typography } from '@mui/material';
 import { convertEnglishNumberToPersian } from '../../../utils/persian';
@@ -6,7 +5,7 @@ import { convertEnglishNumberToPersian } from '../../../utils/persian';
 type Props = {
   data: Data,
   size: number,
-  direction: any,
+  componentDirection: any,
 };
 
 const Container = styled(Box)({
@@ -55,15 +54,15 @@ const Score = styled(Box)(({ theme }) => ({
   marginLeft: 24,
   borderRadius: 25,
   boxShadow: '0px 3px 16px rgba(54, 14, 92, 0.12)',
-  backgroundColor: theme.palette.common.lightGray,
+  backgroundColor: theme.palette.common.gray,
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
 }));
 
-const TopRank: FC<Props> = ({ data, size, direction }) => {
+const TopRank = ({ data, size, componentDirection }: Props) => {
   return (
-    <Container flexDirection={direction === 'rtl' ? 'row' : 'row-reverse'}>
+    <Container flexDirection={componentDirection === 'rtl' ? 'row' : 'row-reverse'}>
       <OuterOval width={`${size*7.41}rem`} height={`${size*5.5}rem`}>
         <InnerOval width={`${size*6.1}rem`} height={`${size*4.18}rem`}>
           <Typography color="common.white" variant="h4" fontSize={`${size*8+16}px`} sx={{ ml: 1 }}>رتبه</Typography>

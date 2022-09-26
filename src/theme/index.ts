@@ -8,7 +8,7 @@ export const colors = {
   black: '#212529',
   primary: '#922CFF',
   secondary: '#F8F9FA',
-  lightGray: '#E9ECEF',
+  gray: '#E9ECEF',
   white: '#FFFFFF',
 };
 
@@ -62,7 +62,7 @@ declare module "@mui/material/styles/createPalette" {
     black: string;
     primary: string;
     secondary: string;
-    lightGray: string;
+    gray: string;
     white: string;
   }
 }

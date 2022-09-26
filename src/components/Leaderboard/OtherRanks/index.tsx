@@ -1,4 +1,3 @@
-import React, { FC } from 'react';
 import styled from '@mui/system/styled';
 import { Box, Typography } from '@mui/material';
 import { convertEnglishNumberToPersian } from '../../../utils/persian';
@@ -27,13 +26,13 @@ const Score = styled(Box)(({ theme }) => ({
   marginLeft: 24,
   borderRadius: 25,
   boxShadow: '0px 3px 16px rgba(54, 14, 92, 0.12)',
-  backgroundColor: theme.palette.common.lightGray,
+  backgroundColor: theme.palette.common.gray,
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
 }));
 
-const OtherRanks: FC<Props> = ({ data }) => {
+const OtherRanks = ({ data }: Props) => {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 5 }}>
       {data.map(studentItem => {

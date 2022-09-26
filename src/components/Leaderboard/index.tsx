@@ -1,6 +1,4 @@
-import React, { FC, useMemo } from 'react'
-import styled from '@mui/system/styled';
-import { Box } from '@mui/material';
+import { styled, Box } from '@mui/material';
 import TopRank from './TopRanks';
 import OtherRanks from './OtherRanks';
 import { normalizeStudentsData } from '../../utils/ranking';
@@ -17,15 +15,15 @@ const Root = styled(Box)({
   position: 'relative',
 });
 
-const Leaderboard: FC = () => {
-  const finalData = useMemo(() => normalizeStudentsData(rawData7), [])
+const Leaderboard = () => {
+  const finalData = normalizeStudentsData(rawData1)
 
   return (
     <Root>
       {finalData.map((stage,index) => (
         <Box key={index}>
           {index < 3
-            ? <TopRank data={stage} size={3 - index * 0.5} direction={index % 2 === 0 ? 'rtl' : 'ltr'} />
+            ? <TopRank data={stage} size={3 - index * 0.5} componentDirection={index % 2 === 0 ? 'rtl' : 'ltr'} />
             : <OtherRanks data={stage} />
           }
         </Box>
