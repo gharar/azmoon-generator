@@ -1,7 +1,6 @@
-import React, { FC } from 'react';
-import styled from "@mui/system/styled";
-import { Box, Card, CardContent, Typography } from '@mui/material';
+import { styled, Box, Card, CardContent, Typography } from '@mui/material';
 import { convertEnglishNumberToPersian } from '../../utils/persian';
+import { BESTS_OF_EXAM } from '../../utils/constants';
 import logo from '../../assets/logo.svg';
 
 const TopCard = styled(Card)({
@@ -53,12 +52,12 @@ const BulletIcon = styled(Box)(({ theme }) => ({
   marginLeft: 24,
 }));
 
-const TopNavigation: FC = () => {
+const TopNavigation = () => {
   return (
     <Box>
       <TopCard>
         <TopCardContent>
-          <Typography color="text.primary" variant="h5">نفرات برتر آزمون</Typography>
+          <Typography color="text.primary" variant="h5">{ BESTS_OF_EXAM }</Typography>
           <Typography color="primary.main" variant="h2">زیست‌شناسی پایه دوازدهم</Typography>
           <Typography color="text.secondary" variant="h3">سمینار جمع‌بندی مباحث کنکور</Typography>
           <img src={logo} alt="logo"/>
