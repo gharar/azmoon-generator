@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { styled, Box, Fab } from '@mui/material';
 import DownloadIcon from '@mui/icons-material/Download';
 import TopNavigation from './TopNavigation';

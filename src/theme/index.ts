@@ -55,17 +55,17 @@ export const typography = {
   },
 };
 
-declare module "@mui/material/styles/createPalette" {
-  interface colors {
-    textPrimary: string;
-    textSecondary: string;
-    black: string;
-    primary: string;
-    secondary: string;
-    gray: string;
-    white: string;
-  }
-}
+// declare module "@mui/material/styles/createPalette" {
+//   interface colors {
+//     textPrimary: string;
+//     textSecondary: string;
+//     black: string;
+//     primary: string;
+//     secondary: string;
+//     gray: string;
+//     white: string;
+//   }
+// }
 
 const theme  = createTheme({
   palette: {
@@ -105,5 +105,18 @@ const theme  = createTheme({
     },
   },
 });
+
+
+declare module "@mui/material/styles/createPalette" {
+  interface CommonColors {
+    textPrimary: string;
+    textSecondary: string;
+    black: string;
+    primary: string;
+    secondary: string;
+    gray: string;
+    white: string;
+  }
+}
 
 export default theme;

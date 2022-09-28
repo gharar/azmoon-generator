@@ -1,5 +1,4 @@
-import styled from '@mui/system/styled';
-import { Box, Typography } from '@mui/material';
+import { styled, Box, Typography } from '@mui/material';
 import { convertEnglishNumberToPersian } from '../../../utils/persian';
 
 type Props = {
