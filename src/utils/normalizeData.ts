@@ -1,3 +1,5 @@
+import { Data, StudentData } from './types'
+
 export function normalizeData(rawData: StudentData[]) {
   const finalData = makeMatrix(rawData.slice(0,10))
 

@@ -1,5 +1,6 @@
 import { styled, Box, Typography } from '@mui/material';
 import { convertEnglishNumberToPersian } from '../../../utils/persian';
+import { Data } from '../../../utils/types'
 
 type Props = {
   data: Data,
@@ -61,7 +62,7 @@ const Score = styled(Box)(({ theme }) => ({
 
 const TopRank = ({ data, size, componentDirection }: Props) => {
   return (
-    <Container flexDirection={componentDirection === 'rtl' ? 'row' : 'row-reverse'}>
+    <Container flexDirection={componentDirection}>
       <OuterOval width={`${size*7.41}rem`} height={`${size*5.5}rem`}>
         <InnerOval width={`${size*6.1}rem`} height={`${size*4.18}rem`}>
           <Typography color="common.white" variant="h4" fontSize={`${size*8+16}px`} sx={{ ml: 1 }}>رتبه</Typography>

@@ -55,18 +55,6 @@ export const typography = {
   },
 };
 
-// declare module "@mui/material/styles/createPalette" {
-//   interface colors {
-//     textPrimary: string;
-//     textSecondary: string;
-//     black: string;
-//     primary: string;
-//     secondary: string;
-//     gray: string;
-//     white: string;
-//   }
-// }
-
 const theme  = createTheme({
   palette: {
     primary: {

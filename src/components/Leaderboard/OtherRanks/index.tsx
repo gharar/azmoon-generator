@@ -1,5 +1,6 @@
 import { styled, Box, Typography } from '@mui/material';
 import { convertEnglishNumberToPersian } from '../../../utils/persian';
+import { Data } from '../../../utils/types'
 
 type Props = {
   data: Data,
