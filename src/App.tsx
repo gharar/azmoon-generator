@@ -1,7 +1,7 @@
-import Home from './components/home';
+import Home from './components/Home';
 
 const App = () => (
-  <div>
+  <div dir="rtl">
     <Home />
   </div>
 )

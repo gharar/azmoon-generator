@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { styled, Box, Fab } from '@mui/material';
 import DownloadIcon from '@mui/icons-material/Download';
-import TopNavigation from './TopNavigation';
-import Leaderboard from './Leaderboard';
+import TopNavigation from './TopNavigation/TopNavigation';
+import Leaderboard from './Leaderboard/Leaderboard';
 import exportAsImage from '../utils/exportAsImage';
 
 const Root = styled(Box)({
